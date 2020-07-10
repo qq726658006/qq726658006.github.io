@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://qq726658006.github.io">
   <title>View及APIView源码解析 | amazing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[toc] django中的View源码解析12FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),  在路由层使用CBV时需要执行 CBV.as_view()方法，使该位置的实参变为一个FBV（函数地址） as_view">
+  <meta name="description" content="django中的View源码解析12FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),  在路由层使用CBV时需要执行 CBV.as_view()方法，使该位置的实参变为一个FBV（函数地址） as_view方法的返回值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="View及APIView源码解析">
 <meta property="og:url" content="https://qq726658006.github.io/2018/01/10/haha/index.html">
 <meta property="og:site_name" content="amazing">
-<meta property="og:description" content="[toc] django中的View源码解析12FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),  在路由层使用CBV时需要执行 CBV.as_view()方法，使该位置的实参变为一个FBV（函数地址） as_view">
+<meta property="og:description" content="django中的View源码解析12FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),  在路由层使用CBV时需要执行 CBV.as_view()方法，使该位置的实参变为一个FBV（函数地址） as_view方法的返回值">
 <meta property="og:locale" content="zh">
 <meta property="article:published_time" content="2018-01-10T05:44:53.000Z">
-<meta property="article:modified_time" content="2020-07-10T05:58:00.144Z">
+<meta property="article:modified_time" content="2020-07-10T05:59:33.141Z">
 <meta property="article:author" content="Will Wu">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -175,8 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[toc]</p>
-<h1 id="django中的View源码解析"><a href="#django中的View源码解析" class="headerlink" title="django中的View源码解析"></a>django中的View源码解析</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),</span><br><span class="line">CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),</span><br></pre></td></tr></table></figure>
+        <h1 id="django中的View源码解析"><a href="#django中的View源码解析" class="headerlink" title="django中的View源码解析"></a>django中的View源码解析</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FBV:    path(&#39;admin&#x2F;&#39;, admin.site.urls),</span><br><span class="line">CBV:    path(&#39;books&#x2F;&#39;, views.BookView.as_view()),</span><br></pre></td></tr></table></figure>
 
 <p>在路由层使用CBV时需要执行 CBV.as_view()方法，使该位置的实参变为一个FBV（函数地址）</p>
 <p>as_view方法的返回值是view </p>
@@ -342,7 +341,7 @@ self.request = request
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          hello-world
         
       </div>
     </a>
